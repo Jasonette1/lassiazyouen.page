@@ -6,9 +6,9 @@ Le site et son code : [mon-portfolio.v2](https://github.com/Jasonette1/mon-portf
 
 ## Fonctionnement
 
-*   GitHub Pages publie le seul dossier `docs/`, sous le domaine `lassiazyouen.page` (`docs/CNAME`) : ce README et la licence ne sont pas servis, donc aucune adresse n'échappe au renvoi.
+*   GitHub Pages publie le seul dossier `docs/`, sous le domaine `lassiazyouen.page` (`docs/CNAME`) : ni ce README, ni la licence, ni `docs/CNAME` ne sont servis, donc aucune adresse n'échappe au renvoi.
 *   `docs/index.html` (l'accueil) et `docs/404.html` (toute autre adresse : GitHub Pages le sert pour chaque page qu'il ne trouve pas) sont identiques, doublon voulu. Un script envoie le visiteur à la même adresse sur `lassiazyouen.fr.eu.org`, chemin, paramètres et ancre compris ; l'origine y est écrite en dur, rien de ce que tape un visiteur ne peut mener ailleurs. Sans script, la page mène à l'accueil du site et montre un lien.
-*   `docs/.nojekyll` : les fichiers sont servis tels quels.
+*   Pas de `docs/.nojekyll` : GitHub Pages construit le dossier avec Jekyll, qui recopie les deux pages telles quelles et ne publie pas `CNAME` ; avec `.nojekyll`, `/CNAME` était servi comme un fichier à télécharger.
 
 ## Licence
 
